@@ -5,11 +5,12 @@
 }
 body {
   font-family: "Public Sans", sans-serif;
-  scroll-behavior: smooth;
 }
-img {
+img,
+svg {
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 li {
   list-style: none;
@@ -22,6 +23,7 @@ button {
   border: none;
   background: none;
   color: white;
+  margin: 10px 0;
 }
 /* -------------------------------------------------- */
 /* header */
@@ -52,10 +54,23 @@ nav {
 .navbar-toggler {
   border: none;
 }
+.navbar-collapse {
+  text-align: center;
+  padding-right: 20px;
+}
+@media (min-width: 200px), (max-width: 400px) {
+  .navbar-collapse {
+    width: 100%;
+  }
+}
 /* ------------------------------------------------- */
 /* showcase */
 main {
   overflow: hidden;
+}
+.wrap {
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .home-img-box {
@@ -85,4 +100,80 @@ main {
   line-height: 1.7;
   margin-bottom: 30px;
   padding: 0 20px;
+}
+/* ---------------------------------- */
+/* services */
+.services-card img {
+  width: 20%;
+  margin: auto;
+}
+.services {
+  padding: 60px 30px;
+  background: hsl(220, 16%, 96%);
+}
+.section-title {
+  color: hsl(233, 26%, 24%);
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  color: hsl(220, 16%, 96%);
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.services-card-group {
+  display: grid;
+  grid-template-columns: 1ft;
+  grid: 30px;
+}
+
+.services-card {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.section-card .card-icon {
+  margin: auto;
+  margin-bottom: 30px;
+}
+.services-card .card-title {
+  padding-top: 10px;
+  color: hsl(233, 26%, 24%);
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.services-card .card-text {
+  font-size: 15px;
+  color: hsl(233, 8%, 62%);
+  line-height: 1.7;
+}
+/* ------------------------------------- */
+/* blog section */
+.blog-section {
+  text-align: center;
+  margin: auto;
+  background: hsl(0, 0%, 98%);
+}
+.blog-section .card,
+.card-body {
+  margin: 20px auto;
+  border: none;
+}
+.card .card-text {
+  text-align: left;
+}
+.card-text h4 {
+  font-size: large;
+}
+.card-text p {
+  font-size: 13px;
+  color: gray;
+  padding-top: 15px;
 }
